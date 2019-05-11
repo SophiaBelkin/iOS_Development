@@ -9,13 +9,12 @@ num += 5
 print("Updated number: \(num)")
 
 //Optional String
-var optionalMessage: String? //it can contain a String value or just nil
+var optionalMessage: String? //It may contain a String value or just nil
 print(optionalMessage); //should print nil
 
 optionalMessage = "123"
 optionalMessage = "456"
 print(optionalMessage);
-
 
 //2. Conditions
 
@@ -37,13 +36,38 @@ for _ in 0..<5 {
 }
 
 //switch
+let i = 3
 
+switch i {
+case 1:
+    print("Number was 1")
+case 2:
+    print("Number was 2")
+case 3:
+    print("Number was 3")
+default:
+     print("Number was whatever")
+}
 
 
 //Array
-var someInts = [Int]()
+//Declaring arrays
+var someInts = [Int]() //Creating an new array object that stores ints
+var numbers = [1, 2, 3]
 
+//Adding elements
+numbers += [4]
+numbers.append(5)
+print("Aaray count: \(numbers.count)") //Getting the number of elements
 
+var secondArray = [String]()
+secondArray.append("test")
+secondArray += ["test2", "test3"]
+print("Second Array count: \(secondArray.count)") //Getting the number of elements
+
+//Removing elements
+secondArray.remove(at:0)
+print("Second Array count: \(secondArray.count)") //Getting the number of elements
 //Sets - A set stores distinct values of the same type in a collection with no defin
 
 //Functions
@@ -113,6 +137,7 @@ a.myProperty
 a.doIt()
 a.doIt(a:1)
 a.doIt(a:2, b:3)
+
 
 
 //enum
