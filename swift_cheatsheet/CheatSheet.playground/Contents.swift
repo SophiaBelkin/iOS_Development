@@ -1,3 +1,23 @@
+/*
+ #Table of contents
+     1. Variables: int, string etc
+     2. Functions
+     3. Classes, including class declaration, protocols, outlets, properties, initializers, lazy properties and class methods
+     4. Instances, including initialization and using properties
+     5. Control Flow
+     6. Loops
+     7. Conditionals, including expressions, boolean logic and operators
+     8. Optional, including optional binding, optional chaining and force unwrapping
+     9. Dictionaries, including initialization and accessing key-value pairs
+     10. Arrays, including accessing values, adding values and looping over values
+     11. Closures, including complete closure syntax, capturing and escaping
+     12. Guard & Defer, including early return with guard and deferred execution with defer
+     13. Generics, including generic types and function generics
+     14. Tuples
+     15. Error Handling
+*/
+
+
 //1. Variables
 var num = 0
 num += 1
@@ -8,31 +28,53 @@ print("Updated number: " + numString)
 num += 5
 print("Updated number: \(num)")
 
-//Optional String
-var optionalMessage: String? //It may contain a String value or just nil
-print(optionalMessage); //should print nil
 
-optionalMessage = "123"
-optionalMessage = "456"
-print(optionalMessage);
+//2. Functions
 
-//2. Conditions
+//Define a function
+func greetUser(name: String, greeting:String) -> String
+{
+    return "\(greeting), \(name)"
+}
 
-//if
+let greet1 = greetUser(name: "Sophia", greeting: "Hello")
+
+//Define a function
+func greetUser(name: String, bySaying greeting:String = "Hello") -> String
+{
+    return "\(greeting), \(name)"
+}
+
+var greet2 = greetUser(name: "Lu", bySaying: "hi")
+
+var greet3 = greetUser(name: "Lu")
+
+//_ states that you do not need to name the parameters in your function call
+func greetUser(_ name: String, _ greeting:String) -> String
+{
+    return "\(greeting), \(name)"
+}
+
+var greet4 = greetUser("Sophia", "hello") //_ states that you do not need to name the parameters in your function call
+
+
+//3. Strucute, Classes, Objects, Properties
+
+
+
+//4. Instances
+
+
+
+
+//5. Control Flow
+
+//if-else
 let isActive = true
 if isActive {
     print("This user is active")
 } else {
     print("Activating user")
-}
-
-//Write a for loop with range operator
-for _ in 0...4 {
-    print("Hello!") //closed operator
-}
-
-for _ in 0..<5 {
-    print("Hello again!")
 }
 
 //switch
@@ -50,7 +92,43 @@ default:
 }
 
 
-//Array
+//6. Loops
+
+//Write a for loop with range operator
+for _ in 0...4 {
+    print("Hello!") //closed operator
+}
+
+for _ in 0..<5 {
+    print("Hello again!")
+}
+
+
+//7. Conditionals
+
+//8. Optional
+var optionalMessage: String? //It may contain a String value or just nil
+print(optionalMessage); //should print nil
+
+optionalMessage = "123"
+optionalMessage = "456"
+print(optionalMessage);
+
+//9. Dictionaries
+//Initializing key-value paires
+var dict:[String: String] = ["Frog":
+    "Kermit", "Pig": "Ms. Piggy",
+              "Weirdo": "Gonzo" ]
+dict["Weirdo"] = "Felipe"
+dict["Frog"] = nil // delete frog
+
+//Accessing Key value paires
+for (type, muppet) in dict {
+    print("type: \(type), muppet: \(muppet)")
+}
+
+
+//10. Arrays
 //Declaring arrays
 var someInts = [Int]() //Creating an new array object that stores ints
 var numbers = [1, 2, 3]
@@ -68,82 +146,55 @@ print("Second Array count: \(secondArray.count)") //Getting the number of elemen
 //Removing elements
 secondArray.remove(at:0)
 print("Second Array count: \(secondArray.count)") //Getting the number of elements
-//Sets - A set stores distinct values of the same type in a collection with no defin
 
-//Functions
-//Define a function
-func greetUser(name: String, greeting:String) -> String
-{
-    return "\(greeting), \(name)"
-}
+//Sets - A collection of unique values
+var someSet: Set<Int> = [1,2,3]
 
-let greet1 = greetUser(name: "Sophia", greeting: "Hello")
-print(greet1)
+someSet.contains(3)
+someSet.insert(5) // sets are not ordered, no need to specify where you are inserting
+let removedElement = someSet.remove(3)
 
-//Define a function
-func greetUser(name: String, bySaying greeting:String = "Hello") -> String
-{
-    return "\(greeting), \(name)"
-}
+//compare Sets
+let anotherSet: Set<Int> = [5,7,13]
 
-var greet2 = greetUser(name: "Lu", bySaying: "hi")
-print(greet2)
+let intersection = someSet.intersection(anotherSet)
+let difference = someSet.symmetricDifference(anotherSet)
+let union = someSet.union(anotherSet)
 
-var greet3 = greetUser(name: "Lu")
-print(greet3)
 
-//_ states that you do not need to name the parameters in your function call
-func greetUser(_ name: String, _ greeting:String) -> String
-{
-    return "\(greeting), \(name)"
-}
 
-var greet4 = greetUser("Sophia", "hello") //_ states that you do not need to name the parameters in your function call
-print(greet4)
+//11. Closure
+
+
+//12. Guard & Defer
 
 
 
 
-//Classes, Objects, Properties
-class OptionalSuperClass {}
-protocol OptionalProtocol1 {}
-protocol OptionalProtocol2 {}
+//14. Tuples -  can easily group a set of values together
+var origin = (x: 0, y: 0)
 
-class MyClass : OptionalSuperClass, OptionalProtocol1, OptionalProtocol2 {
+var point = origin
+point.x = 3
+point.y = 5
 
-  var myProperty:String
-  var myOptionalProperty:String?
-  // More properties...
+print(origin) // (0, 0)
+print(point) // (3, 5)
 
-  // Only need override if subclassing
-  override init()  {
-    myProperty = "Foo"
-  }
+//You can use tuples to initialize more than one variable on a single line:
+var (a, b, c) = (1, 2, 3)
+print(a)
 
-  func doIt() -> Int {
-    return 0
-  }
-  func doIt(a:Int) -> Int {
-    return a
-  }
-  func doIt(a:Int, b:Int) -> Int {
-    return a+b
-  }
 
-}
-
-var a = MyClass()
-a.myProperty
-a.doIt()
-a.doIt(a:1)
-a.doIt(a:2, b:3)
+//15. Error Handling
+//throwing errors and catching them with do-try-catch
 
 
 
 //enum
 enum ClassesType: Int {
-  case iOS = 1
-  case android = 2
+    case iOS = 1
+    case android = 2
 }
 var type = ClassesType.iOS
 print("ios class type \(type)")
@@ -151,7 +202,7 @@ print("ios class type \(type)")
 var optionalDouble:Double? = nil
 optionalDouble = 1.0
 if let definiteDouble = optionalDouble {
-  definiteDouble
+    definiteDouble
 }
 
 var condition = true
@@ -162,16 +213,13 @@ if condition {
 var val = 5
 switch val {
 case 1:
-  "foo"
+    "foo"
 case 2:
-  "bar"
+    "bar"
 default:
-  "baz"
+    "baz"
 }
 
-// omits upper value, use ... to include
-for i in 0..<3 {
-}
 
 var personOne = "Ray"
 var personTwo = "Brian"
@@ -187,16 +235,6 @@ var person2 = "Brian"
 var array:[String] = [person1, person2]
 array.append("Waldo")
 for person in array {
-  print("person: \(person)")
+    print("person: \(person)")
 }
 var waldo = array[2]
-
-var dict:[String: String] = ["Frog":
-  "Kermit", "Pig": "Ms. Piggy",
-  "Weirdo": "Gonzo" ]
-dict["Weirdo"] = "Felipe"
-dict["Frog"] = nil // delete frog
-for (type, muppet) in dict {
-  print("type: \(type), muppet: \(muppet)")
-}
-
