@@ -28,6 +28,20 @@ print("Updated number: " + numString)
 num += 5
 print("Updated number: \(num)")
 
+let stringC = """
+Hey this is a
+example of multiple Line
+string by tutorialsPoint
+"""
+
+//stringC.count
+//stringA.isEmpty
+var stringA = "" // there is empty string but no empty charater variables
+
+if stringA.isEmpty {
+    print( "stringA is empty" )
+}
+
 
 //2. Functions
 
@@ -92,6 +106,24 @@ default:
 }
 
 
+//with fallthrough
+var index = 10
+
+switch index {
+case 100 :
+    print( "Value of index is 100")
+    fallthrough
+case 10,15 :
+    print( "Value of index is either 10 or 15")
+    fallthrough
+case 5 :
+    print( "Value of index is 5")
+default :
+    print( "default case")
+}
+
+
+
 //6. Loops
 
 //Write a for loop with range operator
@@ -106,6 +138,8 @@ for _ in 0..<5 {
 
 //7. Conditionals
 
+
+
 //8. Optional
 var optionalMessage: String? //It may contain a String value or just nil
 print(optionalMessage); //should print nil
@@ -114,18 +148,58 @@ optionalMessage = "123"
 optionalMessage = "456"
 print(optionalMessage);
 
+
+//guard let will unwrap an optional for you, but if it finds nil inside it expects you to exit the function, loop, or condition you used it in.
+func greet(_ name: String?) {
+    guard let unwrapped = name else {
+        print("You didn't provide a name!")
+        return
+    }
+    
+    print("Hello, \(unwrapped)!")
+}
+
+//Force unwrapping
+
+
 //9. Dictionaries
-//Initializing key-value paires
-var dict:[String: String] = ["Frog":
-    "Kermit", "Pig": "Ms. Piggy",
-              "Weirdo": "Gonzo" ]
+//Initializing key-value paires var someDict = [KeyType: ValueType]()
+var dict:[String: String] = [
+    "Frog": "Kermit",
+    "Pig": "Ms. Piggy",
+    "Weirdo": "Gonzo"
+]
 dict["Weirdo"] = "Felipe"
 dict["Frog"] = nil // delete frog
 
-//Accessing Key value paires
+//Iterating over a dict (count and isEmpty works)
 for (type, muppet) in dict {
     print("type: \(type), muppet: \(muppet)")
 }
+
+dict.count
+dict.isEmpty
+
+//convert back to array
+let dictKeys = [String](dict.keys)
+let dictValues = [String](dict.values)
+
+var someDict = [Int: String]()
+var someDict2:[Int:String] = [1:"One", 2:"Two", 3:"Three"]
+
+//Create Dictionary out of Arrays
+var cities = ["Delhi","Bangalore","Hyderabad"]
+var Distance = [2000,10, 620]
+var cityDistanceDict = Dictionary(uniqueKeysWithValues: zip(cities, Distance))
+
+var removedValue = cityDistanceDict.removeValue(forKey: "Delhi")
+print(cityDistanceDict)
+
+//Retrive value
+cityDistanceDict["Bangalore"]
+
+
+//filtering, grouping https://www.tutorialspoint.com/swift/swift_dictionaries.htm
 
 
 //10. Arrays
@@ -166,8 +240,9 @@ let union = someSet.union(anotherSet)
 //11. Closure
 
 
-//12. Guard & Defer
 
+
+//12. Guard & Defer
 
 
 
@@ -205,20 +280,6 @@ if let definiteDouble = optionalDouble {
     definiteDouble
 }
 
-var condition = true
-if condition {
-} else {
-}
-
-var val = 5
-switch val {
-case 1:
-    "foo"
-case 2:
-    "bar"
-default:
-    "baz"
-}
 
 
 var personOne = "Ray"
