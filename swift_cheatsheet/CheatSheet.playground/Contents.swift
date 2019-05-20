@@ -15,6 +15,7 @@
      13. Generics, including generic types and function generics
      14. Tuples
      15. Error Handling
+     16. enum
 */
 
 
@@ -72,11 +73,27 @@ func greetUser(_ name: String, _ greeting:String) -> String
 var greet4 = greetUser("Sophia", "hello") //_ states that you do not need to name the parameters in your function call
 
 
-//3. Strucute, Classes, Objects, Properties
+//3. Classes, including class declaration, protocols, outlets, properties, initializers, lazy properties and class methods
 
 
+//protocols: define “rules” that an adopting class must conform to
 
-//4. Instances
+protocol Edible
+{
+    func eat()
+}
+
+class Apple: Edible
+{
+    func eat()
+    {
+        print("Omnomnom! Eating the apple...")
+    }
+}
+
+
+//4. Instances, including initialization and using properties
+
 
 
 
@@ -266,13 +283,46 @@ print(a)
 
 
 
-//enum
+//16. enum
 enum ClassesType: Int {
     case iOS = 1
     case android = 2
 }
 var type = ClassesType.iOS
 print("ios class type \(type)")
+
+enum names {
+    case Swift
+    case Closures
+}
+
+var lang = names.Closures
+lang = .Closures
+
+switch lang {
+    
+case .Swift:
+    print("Welcome to Swift")
+case .Closures:
+    print("Welcome to Closures")
+}
+
+
+enum Student {
+    case Name(String)
+    case Mark(Int,Int,Int)
+}
+var studDetails = Student.Name("Swift")
+var studMarks = Student.Mark(98,97,95)
+switch studMarks {
+case .Name(let studName):
+    print("Student name is: \(studName).")
+case .Mark(let Mark1, let Mark2, let Mark3):
+    print("Student Marks are: \(Mark1),\(Mark2),\(Mark3).")
+}
+
+
+
 
 var optionalDouble:Double? = nil
 optionalDouble = 1.0
