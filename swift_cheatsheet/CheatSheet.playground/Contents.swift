@@ -2,7 +2,7 @@
  #Table of contents
      1. Variables: int, string etc
      2. Functions
-     3. Classes, including class declaration, protocols, outlets, properties, initializers, lazy properties and class methods
+     3. Structs, Classes, including class declaration, protocols, outlets, properties, initializers, lazy properties and class methods
      4. Instances, including initialization and using properties
      5. Control Flow
      6. Loops
@@ -19,7 +19,7 @@
 */
 
 
-//1. Variables
+//Mark: 1. Variables
 var num = 0
 num += 1
 
@@ -75,6 +75,9 @@ var greet4 = greetUser("Sophia", "hello") //_ states that you do not need to nam
 
 //3. Classes, including class declaration, protocols, outlets, properties, initializers, lazy properties and class methods
 
+//Structs
+
+//If you assign one struct to another, swift makes a copy of it
 
 //protocols: define “rules” that an adopting class must conform to
 
