@@ -36,11 +36,11 @@ I found these tutorials online called 100 Days of Swift and built about 10 small
 
 ## iOS projects showcase
 
-###Project 1: Pitch Perfect [CODE](https://github.com/SophiaBelkin/swift_development/tree/master/projects/PitchPerfect) [DEMO](https://www.youtube.com/watch?v=5PvcLHK71XI)
+### Project 1: Pitch Perfect [CODE](https://github.com/SophiaBelkin/swift_development/tree/master/projects/PitchPerfect) [DEMO](https://www.youtube.com/watch?v=5PvcLHK71XI)
 
 An iPhone app that recoreds audio and plays it back using various audio filters and modes including adjusted rates and pitch, echo and reverb.
 
 
-###Project 2: MeMe App (In Progress)
+### Project 2: MeMe App (In Progress)
 
 A MeMe app that enables users to take pictures, add text at the top and bottom of the image, and share them on the internet by Facebook, SMS and email. 
