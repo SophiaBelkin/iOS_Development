@@ -196,6 +196,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="mtZ-fg-Krf"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Play Audio" id="IyZ-kJ-mLT"/>
                     <connections>
                         <outlet property="chipmunkButton" destination="owX-7C-oof" id="4XT-0V-iyb"/>
                         <outlet property="echoButton" destination="EOp-1V-arw" id="EJY-Lz-Wbq"/>
