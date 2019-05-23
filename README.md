@@ -3,7 +3,7 @@
 This repository is for tracking my iOS development learning progress.
 
 There are 3 parts of this repository
-##Swift programming language cheatsheet [code]
+## Swift programming language cheatsheet [code]
 This is a single XCode playground project that contains the examples of these following topics
 - **Variables**
 - **Strings**
@@ -28,11 +28,11 @@ This is a single XCode playground project that contains the examples of these fo
 - **Error Handling**
 
 
-##100 Days of Swift  https://samvlu.com/tutorials.html
+## 100 Days of Swift  https://samvlu.com/tutorials.html
 I found these tutorials online called 100 Days of Swift and built about 10 small projects by following their instructions. The goal of this is to get comfortable with iOS/Swift development enviroment, programming concepts. 
 
 
-##iOS projects showcase
+## iOS projects showcase
 
 Project 1: Pitch Perfect [CODE](https://github.com/SophiaBelkin/swift_development/tree/master/projects/PitchPerfect) [DEMO](https://www.youtube.com/watch?v=5PvcLHK71XI)
 An iPhone app that recoreds audio and plays it back using various audio filters and modes including adjusted rates and pitch, echo and reverb.
