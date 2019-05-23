@@ -40,8 +40,8 @@ I found these [tutorials](https://samvlu.com/tutorials.html) online called 100 D
 
 An iPhone app that recoreds audio and plays it back using various audio filters and modes including adjusted rates and pitch, echo and reverb.
 
- <img src="https://github.com/SophiaBelkin/swift_development/blob/master/projects/PitchPerfect/IMG_3147.png" width="200">
- <img src="https://github.com/SophiaBelkin/swift_development/blob/master/projects/PitchPerfect/IMG_3146.png" width="200">
+ <img src="https://github.com/SophiaBelkin/swift_development/blob/master/projects/PitchPerfect/IMG_3147.png" width="280">
+ <img src="https://github.com/SophiaBelkin/swift_development/blob/master/projects/PitchPerfect/IMG_3146.png" width="280">
 
 
 ### Project 2: MeMe App (In Progress)
