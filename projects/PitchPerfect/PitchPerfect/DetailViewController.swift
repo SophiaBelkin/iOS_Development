@@ -27,7 +27,7 @@ class DetailViewController: UIViewController {
     var stopTimer: Timer!
     
     enum ButtonType: Int {
-        case slow = 0, fast, chipmunk, vader, echo, reverb
+        case chipmunk = 0, vader, slow, fast, echo, reverb
     }
     
     override func viewDidLoad() {
