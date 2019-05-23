@@ -29,7 +29,7 @@ This is a single XCode playground project that contains the examples of these fo
 
 
 
-## 2. 100 Days of Swift 
+## 2. 100 Days of Swift [CODE](https://github.com/SophiaBelkin/swift_development/tree/master/100_days_swift)
 I found these [tutorials](https://samvlu.com/tutorials.html) online called 100 Days of Swift and built about 10 small projects by following the instructions. The goal of this is to get comfortable with iOS/Swift development enviroment, programming concepts. 
 
 
