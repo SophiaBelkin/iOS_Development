@@ -3,7 +3,7 @@
 This repository is for tracking my iOS development learning progress.
 
 There are 3 parts of this repository
-## 1. Swift programming language cheatsheet [code](https://github.com/SophiaBelkin/swift_development/blob/master/swift_cheatsheet/CheatSheet.playground/Contents.swift)
+## 1. Swift programming language cheatsheet [CODE](https://github.com/SophiaBelkin/swift_development/blob/master/swift_cheatsheet/CheatSheet.playground/Contents.swift)
 This is a single XCode playground project that contains the examples of these following topics
 - **Variables**
 - **Strings**
