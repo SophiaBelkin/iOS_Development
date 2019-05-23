@@ -29,8 +29,8 @@ This is a single XCode playground project that contains the examples of these fo
 
 
 
-## 100 Days of Swift  https://samvlu.com/tutorials.html
-I found these tutorials online called 100 Days of Swift and built about 10 small projects by following their instructions. The goal of this is to get comfortable with iOS/Swift development enviroment, programming concepts. 
+## 100 Days of Swift 
+I found these [tutorials](https://samvlu.com/tutorials.html) online called 100 Days of Swift and built about 10 small projects by following their instructions. The goal of this is to get comfortable with iOS/Swift development enviroment, programming concepts. 
 
 
 
