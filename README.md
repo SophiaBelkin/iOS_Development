@@ -30,7 +30,7 @@ This is a single XCode playground project that contains the examples of these fo
 
 
 ## 2. 100 Days of Swift [CODE](https://github.com/SophiaBelkin/swift_development/tree/master/100_days_swift)
-I found these [tutorials](https://samvlu.com/tutorials.html) online called 100 Days of Swift and built about 10 small projects by following the instructions. The goal of this is to get comfortable with iOS/Swift development enviroment, programming concepts. 
+I found these [tutorials](https://samvlu.com/tutorials.html) online called 100 Days of Swift and built about 10 small projects by following the instructions. The goal of this is to get comfortable with iOS/Swift development environment, programming concepts. 
 
 
 
@@ -38,7 +38,7 @@ I found these [tutorials](https://samvlu.com/tutorials.html) online called 100 D
 
 ### Project 1: Pitch Perfect [DEMO](https://www.youtube.com/watch?v=5PvcLHK71XI)
 
-An iPhone app that recoreds audio and plays it back using various audio filters and modes including adjusted rates and pitch, echo and reverb.
+An iPhone app that records audio and plays it back using various audio filters and modes including adjusted rates and pitch, echo and reverb.
 
  <img src="https://github.com/SophiaBelkin/swift_development/blob/master/projects/PitchPerfect/IMG_3147.png" width="280">
  <img src="https://github.com/SophiaBelkin/swift_development/blob/master/projects/PitchPerfect/IMG_3146.png" width="280">
