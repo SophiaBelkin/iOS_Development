@@ -3,7 +3,7 @@
 This repository is for tracking my iOS development learning progress.
 
 There are 3 parts of this repository
-## Swift programming language cheatsheet [code](https://github.com/SophiaBelkin/swift_development/blob/master/swift_cheatsheet/CheatSheet.playground/Contents.swift)
+## 1. Swift programming language cheatsheet [code](https://github.com/SophiaBelkin/swift_development/blob/master/swift_cheatsheet/CheatSheet.playground/Contents.swift)
 This is a single XCode playground project that contains the examples of these following topics
 - **Variables**
 - **Strings**
@@ -29,12 +29,12 @@ This is a single XCode playground project that contains the examples of these fo
 
 
 
-## 100 Days of Swift 
+## 2. 100 Days of Swift 
 I found these [tutorials](https://samvlu.com/tutorials.html) online called 100 Days of Swift and built about 10 small projects by following the instructions. The goal of this is to get comfortable with iOS/Swift development enviroment, programming concepts. 
 
 
 
-## iOS projects showcase
+## 3. iOS projects showcase
 
 ### Project 1: Pitch Perfect [DEMO](https://www.youtube.com/watch?v=5PvcLHK71XI)
 
