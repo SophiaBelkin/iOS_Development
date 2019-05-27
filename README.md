@@ -61,8 +61,10 @@ Learning Outcomes:
 - Notifications
 - Shift view when keyboard display
 
- <img src="https://github.com/SophiaBelkin/swift_development/blob/master/projects/Meme/IMG_3197.PNG" width="280">
- <img src="https://github.com/SophiaBelkin/swift_development/blob/master/projects/Meme/IMG_3196.PNG" width="280">
+![alt text](<img src="https://github.com/SophiaBelkin/swift_development/blob/master/projects/Meme/IMG_3194.PNG" width="280">)
+![alt text](<img src="https://github.com/SophiaBelkin/swift_development/blob/master/projects/Meme/IMG_3197.PNG" width="280">)
+![alt text](<img src="https://github.com/SophiaBelkin/swift_development/blob/master/projects/Meme/IMG_3196.PNG" width="280">)
+
 
 ### Project 3: MeMe App 2.0 (In Progress)
 
