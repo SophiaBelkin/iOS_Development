@@ -17,6 +17,8 @@ UITextFieldDelegate {
         super.viewDidLoad()
         prepareImagePicker()
         prepareTextFields()
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard (_:)))
+        view.addGestureRecognizer(tapGesture)
     }
     
     // Mark: Sign up to be notified when the keyboard appears
@@ -62,6 +64,18 @@ UITextFieldDelegate {
         bottomTextField.text = "BOTTOM"
     }
     
+    @objc func dismissKeyboard (_ sender: UITapGestureRecognizer) {
+        topTextField.resignFirstResponder()
+        bottomTextField.resignFirstResponder()
+        
+        if topTextField.text == "" {
+            topTextField.text = "TOP"
+        }
+        
+        if bottomTextField.text == "" {
+            bottomTextField.text = "BOTTOM"
+        }
+    }
     
     func prepareImagePicker() {
         imagePicker.delegate = self
@@ -150,8 +164,8 @@ UITextFieldDelegate {
        bottomToolbar.isHidden = true
         
         // Render view to an image
-        UIGraphicsBeginImageContext(self.view.frame.size)
-        view.drawHierarchy(in: self.view.frame, afterScreenUpdates: true)
+        UIGraphicsBeginImageContext(view.frame.size)
+        view.drawHierarchy(in: view.frame, afterScreenUpdates: true)
         let memedImage:UIImage = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
         
