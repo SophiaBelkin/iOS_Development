@@ -65,3 +65,10 @@ Learning Outcomes:
  <img src="https://github.com/SophiaBelkin/swift_development/blob/master/projects/Meme/IMG_3196.PNG" width="280">
 
 ### Project 3: MeMe App 2.0 (In Progress)
+
+Learning Outcomes:
+- Table View 
+- Collection View
+- Navigation
+
+
