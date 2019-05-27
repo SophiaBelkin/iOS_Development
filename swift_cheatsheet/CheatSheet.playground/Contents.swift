@@ -1,25 +1,30 @@
 /*
  #Table of contents
-     1. Variables: int, string etc
-     2. Functions
-     3. Structs, Classes, including class declaration, protocols, outlets, properties, initializers, lazy properties and class methods
-     4. Instances, including initialization and using properties
-     5. Control Flow
-     6. Loops
-     7. Conditionals, including expressions, boolean logic and operators
-     8. Optional, including optional binding, optional chaining and force unwrapping
-     9. Dictionaries, including initialization and accessing key-value pairs
-     10. Arrays, including accessing values, adding values and looping over values
-     11. Closures, including complete closure syntax, capturing and escaping
-     12. Guard & Defer, including early return with guard and deferred execution with defer
-     13. Generics, including generic types and function generics
-     14. Tuples
-     15. Error Handling
-     16. enum
+     - Variables
+     - Strings
+     - Arrays
+     - ControlFlow
+     - Functions
+     - Closures
+     - Enumerations
+     - Classes And Structures
+     - Initialization
+     - Properties
+     - Extensions
+     - Protocols
+     - Loops including for, while and Swift range syntax
+     - Conditionals including expressions, boolean logic and operators
+     - Dictionaries
+     - Tuples
+     - Type Casting
+     - Guard & Defer
+     - Optional Chaining
+     - Advanced Operators
+     - Error Handling
 */
 
 
-//Mark: 1. Variables
+//##Variables
 var num = 0
 num += 1
 
@@ -44,8 +49,7 @@ if stringA.isEmpty {
 }
 
 
-//2. Functions
-
+//## Functions
 //Define a function
 func greetUser(name: String, greeting:String) -> String
 {
@@ -73,35 +77,7 @@ func greetUser(_ name: String, _ greeting:String) -> String
 var greet4 = greetUser("Sophia", "hello") //_ states that you do not need to name the parameters in your function call
 
 
-//3. Classes, including class declaration, protocols, outlets, properties, initializers, lazy properties and class methods
-
-//Structs
-
-//If you assign one struct to another, swift makes a copy of it
-
-//protocols: define “rules” that an adopting class must conform to
-
-protocol Edible
-{
-    func eat()
-}
-
-class Apple: Edible
-{
-    func eat()
-    {
-        print("Omnomnom! Eating the apple...")
-    }
-}
-
-
-//4. Instances, including initialization and using properties
-
-
-
-
-
-//5. Control Flow
+//## Control Flow
 
 //if-else
 let isActive = true
@@ -122,7 +98,7 @@ case 2:
 case 3:
     print("Number was 3")
 default:
-     print("Number was whatever")
+    print("Number was whatever")
 }
 
 
@@ -144,7 +120,113 @@ default :
 
 
 
-//6. Loops
+//## Arrays
+//Declaring arrays
+var someInts = [Int]() //Creating an new array object that stores ints
+var numbers = [1, 2, 3]
+
+//Adding elements
+numbers += [4]
+numbers.append(5)
+print("Aaray count: \(numbers.count)") //Getting the number of elements
+
+var secondArray = [String]()
+secondArray.append("test")
+secondArray += ["test2", "test3"]
+print("Second Array count: \(secondArray.count)") //Getting the number of elements
+
+//Removing elements
+secondArray.remove(at:0)
+print("Second Array count: \(secondArray.count)") //Getting the number of elements
+
+//Sets - A collection of unique values
+var someSet: Set<Int> = [1,2,3]
+
+someSet.contains(3)
+someSet.insert(5) // sets are not ordered, no need to specify where you are inserting
+let removedElement = someSet.remove(3)
+
+//compare Sets
+let anotherSet: Set<Int> = [5,7,13]
+
+let intersection = someSet.intersection(anotherSet)
+let difference = someSet.symmetricDifference(anotherSet)
+let union = someSet.union(anotherSet)
+
+
+
+//## Closures
+
+
+
+
+//3. Classes, including class declaration, protocols, outlets, properties, initializers, lazy properties and class methods
+
+//Structs -  is a data type. used when we need more than 1 value to represent a object
+struct Movie {
+    let title: String
+    var year: Int
+}
+var myMovie = Movie(title: "a new movie", year: 2019)
+print("\(myMovie.title) is made in \(myMovie.year).")
+
+myMovie.year = 2020
+print("\(myMovie.title) is made in \(myMovie.year).")
+
+//you can have struct contains structs
+struct Song {
+    let title: String
+    let length: String
+    let artist: Artist
+}
+
+struct Artist {
+    let firstName: String
+    let lastName: String
+    var ago: Int
+    let homeTown: String
+}
+
+
+struct Product {
+    let name: String
+    var price: Double
+    
+    mutating func discount() {
+        price -= 0.1
+    }
+    
+    var formattedPrice:String {
+        return "$\(price)"
+    }
+}
+
+//If you assign one struct to another, swift makes a copy of it
+
+//protocols: define “rules” that an adopting class must conform to
+
+protocol Edible
+{
+    func eat()
+}
+
+class Apple: Edible
+{
+    func eat()
+    {
+        print("Omnomnom! Eating the apple...")
+    }
+}
+
+//## Classes
+
+
+//## Instances
+
+
+
+
+//## Loops
 
 //Write a for loop with range operator
 for _ in 0...4 {
@@ -222,43 +304,9 @@ cityDistanceDict["Bangalore"]
 //filtering, grouping https://www.tutorialspoint.com/swift/swift_dictionaries.htm
 
 
-//10. Arrays
-//Declaring arrays
-var someInts = [Int]() //Creating an new array object that stores ints
-var numbers = [1, 2, 3]
-
-//Adding elements
-numbers += [4]
-numbers.append(5)
-print("Aaray count: \(numbers.count)") //Getting the number of elements
-
-var secondArray = [String]()
-secondArray.append("test")
-secondArray += ["test2", "test3"]
-print("Second Array count: \(secondArray.count)") //Getting the number of elements
-
-//Removing elements
-secondArray.remove(at:0)
-print("Second Array count: \(secondArray.count)") //Getting the number of elements
-
-//Sets - A collection of unique values
-var someSet: Set<Int> = [1,2,3]
-
-someSet.contains(3)
-someSet.insert(5) // sets are not ordered, no need to specify where you are inserting
-let removedElement = someSet.remove(3)
-
-//compare Sets
-let anotherSet: Set<Int> = [5,7,13]
-
-let intersection = someSet.intersection(anotherSet)
-let difference = someSet.symmetricDifference(anotherSet)
-let union = someSet.union(anotherSet)
 
 
-
-//11. Closure
-
+//## Closure - a veriable holds code
 
 
 
@@ -293,6 +341,14 @@ enum ClassesType: Int {
 }
 var type = ClassesType.iOS
 print("ios class type \(type)")
+
+enum Finger:Int {
+    case thumb = 1, index, middle, ring, pinky
+}
+
+var finger = Finger.thumb.rawValue
+print("finger type \(finger)")
+
 
 enum names {
     case Swift

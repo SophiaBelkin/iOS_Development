@@ -29,7 +29,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         let items = [UIImage()]
         let ac = UIActivityViewController(activityItems: items, applicationActivities: nil)
         present(ac, animated: true)
-    
     }
     
     
