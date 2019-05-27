@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image-1" translatesAutoresizingMaskIntoConstraints="NO" id="bBe-Wg-xaS">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultImg" translatesAutoresizingMaskIntoConstraints="NO" id="bBe-Wg-xaS">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                             </imageView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C8S-iw-mhd">
@@ -37,11 +37,11 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Top" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hAH-Zl-V7g">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Top" textAlignment="center" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="hAH-Zl-V7g">
                                 <rect key="frame" x="0.0" y="117" width="375" height="57"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="47"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" enablesReturnKeyAutomatically="YES"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Bottom" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g2G-FX-1BR">
                                 <rect key="frame" x="0.0" y="477" width="375" height="57"/>
@@ -69,15 +69,20 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Compose Your Image" id="qyo-Is-PnK">
-                        <barButtonItem key="leftBarButtonItem" title="Item" systemItem="action" id="rlZ-3k-vdx">
+                        <barButtonItem key="leftBarButtonItem" title="Reset" id="iOs-iL-ur4">
+                            <connections>
+                                <action selector="resetPhotoAndText:" destination="BYZ-38-t0r" id="Xk3-EQ-5b5"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Item" systemItem="action" id="rlZ-3k-vdx">
                             <connections>
                                 <action selector="launchActivityView:" destination="BYZ-38-t0r" id="LVX-FT-YtH"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="cancel" id="iOs-iL-ur4"/>
                     </navigationItem>
                     <connections>
                         <outlet property="bottomTextField" destination="g2G-FX-1BR" id="Ypd-6b-thM"/>
+                        <outlet property="bottomToolbar" destination="C8S-iw-mhd" id="XbI-Cp-aFb"/>
                         <outlet property="cameraButton" destination="7E8-zc-u3b" id="8BK-Qs-vYs"/>
                         <outlet property="imageView" destination="bBe-Wg-xaS" id="AUt-Tn-z8p"/>
                         <outlet property="topTextField" destination="hAH-Zl-V7g" id="eHE-wn-aqG"/>
@@ -107,6 +112,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Image-1" width="441" height="750"/>
+        <image name="defaultImg" width="441" height="750"/>
     </resources>
 </document>
