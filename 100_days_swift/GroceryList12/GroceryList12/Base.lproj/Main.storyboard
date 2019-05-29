@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="v3B-e0-Dbp">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Groceries-->
+        <scene sceneID="HGA-8L-UtV">
+            <objects>
+                <tableViewController id="tUA-TA-IYx" customClass="GroceryTableViewController" customModule="GroceryList12" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="0T1-6p-zNI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" showsReorderControl="YES" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="groceryCell" textLabel="DUm-7t-lRf" style="IBUITableViewCellStyleDefault" id="O8O-wl-1R7">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="O8O-wl-1R7" id="W3M-5O-f9f">
+                                    <rect key="frame" x="0.0" y="0.0" width="341" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="DUm-7t-lRf">
+                                            <rect key="frame" x="16" y="0.0" width="324" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="tUA-TA-IYx" id="WAm-JH-bQW"/>
+                            <outlet property="delegate" destination="tUA-TA-IYx" id="Ucr-hj-Fn4"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Groceries" id="eE0-ae-8wV"/>
+                    <connections>
+                        <segue destination="gqD-GK-A1A" kind="show" id="QCP-T8-mxG"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VVr-vI-pS3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1100" y="105.69715142428787"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="fQN-5v-anp">
+            <objects>
+                <viewController id="gqD-GK-A1A" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BG7-z8-0Uv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bWR-64-cBt">
+                                <rect key="frame" x="20" y="84" width="335" height="583"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="bWR-64-cBt" firstAttribute="top" secondItem="v6P-If-2B7" secondAttribute="top" constant="20" id="Gk4-UH-h3F"/>
+                            <constraint firstItem="v6P-If-2B7" firstAttribute="bottom" secondItem="bWR-64-cBt" secondAttribute="bottom" id="sCV-D1-wdo"/>
+                            <constraint firstItem="bWR-64-cBt" firstAttribute="leading" secondItem="v6P-If-2B7" secondAttribute="leading" constant="20" id="tGw-Dp-FYi"/>
+                            <constraint firstItem="v6P-If-2B7" firstAttribute="trailing" secondItem="bWR-64-cBt" secondAttribute="trailing" constant="20" id="xda-2K-XWd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="v6P-If-2B7"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hpy-Ou-Tkv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1881" y="107"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="fxj-mQ-oSx">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="v3B-e0-Dbp" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="VkX-Qb-d5q">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="tUA-TA-IYx" kind="relationship" relationship="rootViewController" id="Z3N-a5-YYI"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P2B-Dg-CBp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="160.80000000000001" y="105.69715142428787"/>
+        </scene>
+    </scenes>
+</document>
