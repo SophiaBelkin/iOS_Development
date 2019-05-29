@@ -15,6 +15,7 @@
 		677CDC1E229CCED00058207E /* GroceryList12UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677CDC1D229CCED00058207E /* GroceryList12UITests.swift */; };
 		677CDC2C229E2E9D0058207E /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677CDC2B229E2E9D0058207E /* Model.swift */; };
 		677CDC2E229E2EBC0058207E /* GroceryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677CDC2D229E2EBC0058207E /* GroceryTableViewController.swift */; };
+		677CDC30229E45640058207E /* NewGroceryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677CDC2F229E45640058207E /* NewGroceryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		677CDC1F229CCED00058207E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		677CDC2B229E2E9D0058207E /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		677CDC2D229E2EBC0058207E /* GroceryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryTableViewController.swift; sourceTree = "<group>"; };
+		677CDC2F229E45640058207E /* NewGroceryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewGroceryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				677CDBFD229CCECE0058207E /* AppDelegate.swift */,
 				677CDC2B229E2E9D0058207E /* Model.swift */,
 				677CDC2D229E2EBC0058207E /* GroceryTableViewController.swift */,
+				677CDC2F229E45640058207E /* NewGroceryViewController.swift */,
 				677CDC01229CCECE0058207E /* Main.storyboard */,
 				677CDC04229CCED00058207E /* Assets.xcassets */,
 				677CDC06229CCED00058207E /* LaunchScreen.storyboard */,
@@ -260,6 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				677CDC2C229E2E9D0058207E /* Model.swift in Sources */,
+				677CDC30229E45640058207E /* NewGroceryViewController.swift in Sources */,
 				677CDC2E229E2EBC0058207E /* GroceryTableViewController.swift in Sources */,
 				677CDBFE229CCECE0058207E /* AppDelegate.swift in Sources */,
 			);

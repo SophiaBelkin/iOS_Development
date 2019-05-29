@@ -44,17 +44,17 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Groceries" id="eE0-ae-8wV"/>
                     <connections>
-                        <segue destination="gqD-GK-A1A" kind="show" id="QCP-T8-mxG"/>
+                        <segue destination="gqD-GK-A1A" kind="show" identifier="segueToNewGrocery" id="6Ri-5P-nMu"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VVr-vI-pS3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1100" y="105.69715142428787"/>
         </scene>
-        <!--View Controller-->
+        <!--New Grocery-->
         <scene sceneID="fQN-5v-anp">
             <objects>
-                <viewController id="gqD-GK-A1A" sceneMemberID="viewController">
+                <viewController id="gqD-GK-A1A" customClass="NewGroceryViewController" customModule="GroceryList12" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BG7-z8-0Uv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -75,6 +75,16 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="v6P-If-2B7"/>
                     </view>
+                    <navigationItem key="navigationItem" title="New Grocery" id="tmc-gl-ip3">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="P9E-gg-sBn">
+                            <connections>
+                                <action selector="doneButton:" destination="gqD-GK-A1A" id="o5w-W8-Haj"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="textView" destination="bWR-64-cBt" id="Jrp-uQ-qGV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hpy-Ou-Tkv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

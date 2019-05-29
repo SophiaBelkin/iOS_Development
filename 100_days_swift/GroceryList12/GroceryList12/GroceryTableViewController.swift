@@ -22,19 +22,26 @@ class GroceryTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         self.navigationItem.leftBarButtonItem = self.editButtonItem
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: nil)
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(segueToNewGrocery))
         
     }
 
-    var data = model.data
     
     @objc func getCloudData() {
-        data = model.cloudData
+        model.data = model.cloudData
         self.tableView.reloadData()
         // Dismiss the refresh control.
         DispatchQueue.main.async {
             self.refreshControl?.endRefreshing()
         }
+    }
+    
+     @objc func segueToNewGrocery(){
+        performSegue(withIdentifier: "segueToNewGrocery", sender: self)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+          self.tableView.reloadData()
     }
     
     // MARK: - Table view data source
@@ -46,14 +53,14 @@ class GroceryTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return data.count
+        return model.data.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "groceryCell", for: indexPath)
 
-        cell.textLabel?.text = data[indexPath.row]
+        cell.textLabel?.text = model.data[indexPath.row]
         return cell
     }
  
@@ -69,7 +76,7 @@ class GroceryTableViewController: UITableViewController {
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-             data.remove(at: indexPath.row)
+             model.data.remove(at: indexPath.row)
             // Delete the row from the data source
             tableView.deleteRows(at: [indexPath], with: .fade)
            //self.tableView.reloadData()
@@ -79,20 +86,20 @@ class GroceryTableViewController: UITableViewController {
     }
     
 
-    /*
+    
     // Override to support rearranging the table view.
     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
+      
     }
-    */
+    
 
-    /*
+    
     // Override to support conditional rearranging of the table view.
     override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
         // Return false if you do not want the item to be re-orderable.
         return true
     }
-    */
+ 
 
     /*
     // MARK: - Navigation
