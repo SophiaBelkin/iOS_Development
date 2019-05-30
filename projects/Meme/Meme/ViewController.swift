@@ -55,6 +55,7 @@ UITextFieldDelegate {
         let items = [img]
         let ac = UIActivityViewController(activityItems: items as [Any], applicationActivities: nil)
         present(ac, animated: true)
+        view.frame.origin.y = 0
     }
     
     
@@ -160,7 +161,7 @@ UITextFieldDelegate {
     
     func generateMemedImage() -> UIImage {
         // Hide toolbar and navbar
-       self.navigationController?.setNavigationBarHidden(true, animated: false)
+//     self.navigationController?.view.backgroundColor = .clear
        bottomToolbar.isHidden = true
         
         // Render view to an image
@@ -170,7 +171,7 @@ UITextFieldDelegate {
         UIGraphicsEndImageContext()
         
         // Show toolbar and navbar
-       self.navigationController?.setNavigationBarHidden(false, animated: false)
+//       self.navigationController?.navigationBar.isTranslucent = false
         bottomToolbar.isHidden = false
         
         return memedImage
