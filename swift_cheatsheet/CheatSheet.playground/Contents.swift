@@ -309,10 +309,16 @@ cityDistanceDict["Bangalore"]
 //## Closure - a veriable holds code
 
 
-
+import Foundation
 //12. Guard & Defer
-
-
+//let str = "£££"
+let str = "fgdjhfkjad(1)"
+let invalidAsciiChars = "^[\\x20-\\x7E]+$"
+str ~= invalidAsciiChars
+str.range(of: invalidAsciiChars, options: .regularExpression)
+//guard str.range(of: invalidAsciiChars, options: .regularExpression) != nil else {
+//    print("No address to submit")
+//}
 
 //14. Tuples -  can easily group a set of values together
 var origin = (x: 0, y: 0)
@@ -408,3 +414,6 @@ for person in array {
     print("person: \(person)")
 }
 var waldo = array[2]
+
+
+
